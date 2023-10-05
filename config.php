@@ -1,8 +1,15 @@
 <?php
-define('HOST', 'localhost');
-define('USER', 'root');
-define('PASS', '');
-define('BASE', 'sislogin');
 
-$conn = new mysqli(HOST, USER, PASS, BASE);
+$HOST = "localhost";
+$USER = "root";
+$PASS = "";
+$BASE = "sislogin";
+
+$conn = mysqli_connect($HOST, $USER, $PASS, $BASE);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+mysqli_close($conn);
 ?>

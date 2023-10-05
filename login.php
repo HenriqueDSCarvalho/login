@@ -11,7 +11,7 @@
         $senha = $_POST["senha"];
 
         $sql = "SELECT * FROM usuarios 
-        WHERE usuario = '{$usuario}'
+        WHERE usuario = '{$usuario}';
         AND senha = '{$senha}'";
         
         $res = $conn->query($sql) or die($conn->error);
